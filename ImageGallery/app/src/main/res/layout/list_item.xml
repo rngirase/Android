@@ -7,7 +7,7 @@
     android:id="@+id/item_container">
 
     <ImageView
-        android:id="@+id/itm_image"
+        android:id="@+id/item_image"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@android:drawable/ic_menu_edit" />

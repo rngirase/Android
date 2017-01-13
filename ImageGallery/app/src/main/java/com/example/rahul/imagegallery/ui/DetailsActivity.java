@@ -1,7 +1,7 @@
 package com.example.rahul.imagegallery.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,18 +11,24 @@ public class DetailsActivity extends AppCompatActivity {
     private static final String BUNDLE_EXTRAS = "BUNDLE_EXTRAS";
     private static final String LOCATION = "LOCATION";
     private static final String DATE = "DATE";
-    private static final String IMAGEID="IMAGEID";
-   private ImageView imageView;
+    private static final String IMAGEID = "IMAGEID";
+    private ImageView imageView;
+    private TextView location;
+    private TextView date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        imageView= (ImageView)findViewById(R.id.locationimage);
+        imageView = (ImageView) findViewById(R.id.locationimage);
+        date = (TextView) findViewById(R.id.DateValue);
+        location = (TextView) findViewById(R.id.locationValue);
+
         Bundle extras = getIntent().getBundleExtra(BUNDLE_EXTRAS);
 
-        ((TextView)findViewById(R.id.DateValue)).setText(extras.getString(DATE));
-        ((TextView)findViewById(R.id.locationValue)).setText(extras.getString(LOCATION));
+        date.setText(extras.getString(DATE));
+        location.setText(extras.getString(LOCATION));
         imageView.setImageResource(extras.getInt(IMAGEID));
     }
 }

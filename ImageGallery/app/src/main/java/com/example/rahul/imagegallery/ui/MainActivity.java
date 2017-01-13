@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements ImageAdapter.Item
     }
 
     /**
-     *
      * @param p position
      */
     public void onItemClick(int p) {
