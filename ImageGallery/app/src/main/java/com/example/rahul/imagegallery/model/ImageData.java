@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This class is a dummy data source, used to simulate the kind of input recieve from a
+ * Database or Web source.
  * Created by Rahul on 1/12/17.
  */
 
@@ -21,13 +23,14 @@ public class ImageData {
             "San Jose, California", "Dubai", "Atlanta,Georgia",
             "Lombard, Illinois", "Saint Lois, Indiana", "New jercy, NewYork", "Manali, India"};
 
-    private static final int[] images = {R.drawable.scene1, R.drawable.scene2,R.drawable.scene3,R.drawable.scene4,R.drawable.scene5,
-            R.drawable.scene6,R.drawable.scene7,R.drawable.scene8,R.drawable.scene9};
+    private static final int[] images = {R.drawable.scene1, R.drawable.scene2, R.drawable.scene3,
+            R.drawable.scene4, R.drawable.scene5,
+            R.drawable.scene6, R.drawable.scene7, R.drawable.scene8, R.drawable.scene9};
 
 
     public static List<ImageList> getListData() {
         List<ImageList> data = new ArrayList<>();
-
+        //Repeat process 4 times, so that we have enough data to demonstrate a scrollable
         for (int x = 0; x < 2; x++) {
 
             for (int i = 0; i < images.length; i++) {
